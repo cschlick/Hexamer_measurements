@@ -1,0 +1,7 @@
+
+monomerlen=142
+asusize=4
+numligands=2
+endsequence=PNAPILST
+patchsize=4
+
