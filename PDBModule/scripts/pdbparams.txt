@@ -1,0 +1,7 @@
+
+monomerlen=149
+asusize=1
+numligands=0
+endsequence=PNAPILSTLPGTV
+patchsize=4
+

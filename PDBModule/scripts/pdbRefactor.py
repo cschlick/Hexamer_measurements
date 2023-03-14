@@ -1,11 +1,7 @@
-#!/usr/bin/env python
-
-
-
 import sys, os
 
 # Edit this path to the location of the PDBModule folder on your computer
-sys.path.append("../../PDBModule/")
+#sys.path.append("../")
 
 from PDBFile import PDBFile
 
