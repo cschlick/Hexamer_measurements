@@ -9,8 +9,9 @@ conda install numpy scipy matplotlib seaborn scikit-learn biopython tqdm
 
 ### Clone this repository
 ```bash
-git clone
+git clone https://github.com/cschlick/Hexamer_measurements.git
 cd Hexamer_measurements
+
 ```
 
 ### Convert files
