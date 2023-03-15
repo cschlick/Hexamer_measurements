@@ -8,7 +8,7 @@ conda install numpy scipy matplotlib seaborn scikit-learn biopython tqdm
 ```
 
 ### Convert files
-This script uses very old to re-format a pdb file. It uses a parameter file with information about the capsid to split the file into multiple "models" using the pdb MODEL ENDMDL flags. This is useful for displaying the full model in in viewers like UCSF Chimera, which struggle to interpret multiple identical chain IDs in the same model. This happens to be useful for the subsequent script which uses the Biopython PDB package. Here we convert all pdb files in the ../data folder.
+This script uses some old code to re-format a pdb file. It uses a parameter file with information about the capsid to split the file into multiple "models" using the pdb MODEL ENDMDL flags. This is useful for displaying the full model in in viewers like UCSF Chimera, which struggle to interpret multiple identical chain IDs in the same model. This happens to be useful for the subsequent script which uses the Biopython PDB package. Here we convert all pdb files in the ../data folder.
 ```bash
 cd hexamer_measurements
 python convert_files.py ../data
