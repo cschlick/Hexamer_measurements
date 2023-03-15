@@ -167,6 +167,9 @@ def main():
 
     plt.tight_layout()
     
+    outpath= Path(args.output_figure)
+    if outpath.exists():
+        outpath.unlink()
     plt.savefig(args.output_figure)
 
 
