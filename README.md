@@ -22,7 +22,7 @@ The second step is to open the capsid structures, cluster the chains into 30 "he
 python measure_hexamers.py ../data
 ```
 
-The measurements json file is a dictionary which includes a list of all the named measurements specified below:
+The measurements json file is a dictionary which includes a list of 8 named measurements.:
 ```python
 {"distances":{"a":[], # B-B' pore
                  "b":[], # C-C' pore
@@ -35,6 +35,9 @@ The measurements json file is a dictionary which includes a list of all the name
  ```
 
 ![alt text](https://github.com/cschlick/Hexamer_measurements/blob/e0705ed558d9f63ae154127a2d5109a915dff32a/HexamerDiagram.jpg)
+
+Each measurement is defined below:
+ - a: The distance between residue 131 CA atom between chain B and B'
 
 
 
