@@ -370,10 +370,10 @@ def measure_structure(s):
             #io.set_structure(chain)
             #io.save(chain_label + ".pdb")
         
-        # get hexamer center
-        atoms = itertools.chain.from_iterable([chain.get_atoms() for label,chain in hexamer_chain_dict.items()])
-        all_coords = np.vstack([a.get_coord() for a in atoms])
-        hexamer_center = all_coords.mean(axis=0)
+        # # get hexamer center
+        # atoms = itertools.chain.from_iterable([chain.get_atoms() for label,chain in hexamer_chain_dict.items()])
+        # all_coords = np.vstack([a.get_coord() for a in atoms])
+        # hexamer_center = all_coords.mean(axis=0)
 
         # value "a"
         v1 = get_residue_ca_coord(hexamer_chain_dict["B"],131)
@@ -435,6 +435,16 @@ def measure_structure(s):
         dimer5 = ["C'","D'"]
         dimer6 = ["C2'","D2'"]
         dimers = [dimer1,dimer2,dimer3,dimer4,dimer5,dimer6]
+        
+        # get hexamer base center
+        hexamer_bases = []
+        for label1,label2 in dimers:
+            chain_i, chain_j = hexamer_index_dict[label1], hexamer_index_dict[label2]
+            base_i, base_j = handle_dict["base"]["handle_coords"][chain_i], handle_dict["base"]["handle_coords"][chain_j]
+            base = (base_i+base_j)/2
+            hexamer_bases.append(base)
+        hexamer_center = np.array(hexamer_bases).mean(axis=0)
+        
         for label1,label2 in dimers:
             chain_i, chain_j = hexamer_index_dict[label1], hexamer_index_dict[label2]
             base_i, base_j = handle_dict["base"]["handle_coords"][chain_i], handle_dict["base"]["handle_coords"][chain_j]
