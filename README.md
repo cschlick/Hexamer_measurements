@@ -36,9 +36,20 @@ The measurements json file is a dictionary which includes a list of 8 named meas
 
 ![alt text](https://github.com/cschlick/Hexamer_measurements/blob/e0705ed558d9f63ae154127a2d5109a915dff32a/HexamerDiagram.jpg)
 
-Each measurement is defined below:
- - a: The distance between residue 131 CA atom between chain B and B'
+Each distance measurement is defined below:
+ - a: The distance between residue 131 CA atoms between chain B and B'
+ - b: The distance between residue 131 CA atoms between chain C and C'
+ - c: The distance between residue 131 CA atoms between chain D2 and D2'
+ - d: The distance between residue 131 CA atoms between chain A and D, AND between chain A' and D'
+ - e: The distance between residue 131 CA atoms between chain A and C2', AND between chain A' and C2
+ - f: The distance between residue 131 CA atoms between chain C2 and D, AND between chain D' and C2'
 
+For angles, three points are defined for each dimer:
+1. The center of the hexamer (constant for all dimer in the hexamer)
+2. The center of the dimer "base" region (Mean of all coordinates in residue range: 1-61 and 95, 142
+3. The center of the dimer "tip" region (Mean of all coordinates in residue range: 61-95
+
+The angle is defined as the angle between two vectors: base to hexamer center, and base to tip. Angles for all C,D chains are combined, as are angles for all A,B chains around a hexamer.
 
 
 ### Plot measurments
