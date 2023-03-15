@@ -34,7 +34,7 @@ The measurements json file is a dictionary which includes a list of all the name
            "ab":[]}} # ab dimer angle
  ```
 
-![alt text]()
+![alt text](https://github.com/cschlick/Hexamer_measurements/blob/e0705ed558d9f63ae154127a2d5109a915dff32a/HexamerDiagram.jpg)
 
 
 
