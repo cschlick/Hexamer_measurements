@@ -65,5 +65,12 @@ The final script collects all the measurements from the .json files, and plots t
 python analyse_and_plot.py ../data test_fig
 ```
 
+### Run on a non-capsid hexamer
+To measure a pdb file that has a single hexamer (not a T=4 capsid), such as might come from an experimental structure, use a modified version of the script.
+```bash
+python measure_single_hexamer.py ../experimental_data
+```
+This should write a json file with the following contents:
 
 
+{"distances": {"a": [35.41972732543945], "b": [25.42247772216797], "c": [35.75651550292969], "d": [79.69721221923828, 79.6960678100586], "e": [81.47354888916016, 81.47306823730469], "f": [82.27655792236328, 82.2757797241211]}, "angles": {"cd": [99.78011102553393, 100.80055352499853, 99.7804021241633, 100.8006734705682], "ab": [97.28775036421341, 97.28759887629494]}}
