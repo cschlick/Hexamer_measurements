@@ -24,16 +24,18 @@ python measure_hexamers.py ../data
 
 The measurements json file is a dictionary which includes a list of all the named measurements specified below:
 ```python
-{
-"distances":{"a":[], # B-B' pore
+{"distances":{"a":[], # B-B' pore
                  "b":[], # C-C' pore
                  "c":[], # D2-D2' pore
                  "d":[], # A-D, A'-D' expansion
                  "e":[], # A-C2', A'-C2 expansion
                  "f":[]}, # C2-D, C2'-D' expansion
- "angles":{"cd":[],"ab":[]}
- }
+ "angles":{"cd":[], # CD dimer angle
+           "ab":[]}} # ab dimer angle
  ```
+
+
+
 
 ### Plot measurments
 The final script collects all the measurements from the .json files, and plots them. Also specify the name/location to write the figure.
