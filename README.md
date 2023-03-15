@@ -7,6 +7,12 @@ A place to store scripts for measuring hexamer structural properties for HBV cap
 conda install numpy scipy matplotlib seaborn scikit-learn biopython tqdm
 ```
 
+### Clone this repository
+```bash
+git clone
+cd Hexamer_measurements
+```
+
 ### Convert files
 This script uses some old code to re-format a pdb file. It uses a parameter file with information about the capsid to split the file into multiple "models" using the pdb MODEL ENDMDL tags. This is useful for displaying the full model in in viewers like UCSF Chimera, which seem to give display errors with multiple identical chain IDs in the same model. This also happens to be useful for the subsequent script which uses the Biopython PDB package, in which structures need to have either unique chain IDs or be separated into models. Here we convert all pdb files in the ../data folder.
 ```bash
